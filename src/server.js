@@ -14,7 +14,7 @@ const server = express()
 
 
 //settings
-server.set('PORT', 4000)
+server.set('PORT', process.env.PORT || 4600)
 
 //middlewares
 server.use(cors())
