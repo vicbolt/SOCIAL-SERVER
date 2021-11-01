@@ -14,7 +14,7 @@ const server = express()
 
 
 //settings
-server.set('PORT', process.env.PORT || 5500)
+server.set('PORT', process.env.PORT || 6000)
 
 //middlewares
 server.use(cors())
@@ -27,7 +27,9 @@ server.use('/api/comment', routes.comment)
 server.use('/api/post', routes.post)
 server.use('/api/user', routes.user)
 
-
+server.get('/', (req,res) => {
+    return res.json('bienvenido')
+})
 
 //static folder
 server.use(express.static(path.join(__dirname, 'statics')))
