@@ -27,6 +27,9 @@ server.use('/api/comment', routes.comment)
 server.use('/api/post', routes.post)
 server.use('/api/user', routes.user)
 
+server.get('/', (req,res) =>{
+    return res.json({ msg: 'Welcome'})
+})
 
 //static folder
 server.use(express.static(path.join(__dirname, 'statics')))
