@@ -12,7 +12,7 @@ const upload = async (req,res) => {
             return res.status(400).json({error: 'El usuario no existe'})
         }
 
-        const hostname = 'http://localhost:4500/'
+        const hostname = 'http://localhost:7000/'
         const file = req.file
         const filename = hostname + file.filename
 
